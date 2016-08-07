@@ -1,0 +1,33 @@
+$progress-color: #f33535
+
+.progress
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    right: 0
+    opacity: 0
+    visibility: hidden
+    transition: 350ms linear
+
+.progress_visible
+    opacity: 1
+    visibility: visible
+    transition: none
+
+.progress__line
+    height: 2px
+    background-color: $progress-color
+    position: relative
+    width: 100%
+    transform: translate3d(-100%, 0, 0)
+    transition: 350ms linear
+
+.progress__line:after
+    content: ''
+    position: absolute
+    right: 0
+    width: 100px
+    height: 100%
+    box-shadow: 0 0 10px $progress-color, 0 0 5px $progress-color
+    transform: rotate(3deg) translate(0px, -4px)

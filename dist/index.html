@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress</title>
+    <link rel="stylesheet" href="css/progress.min.css">
+</head>
+<body>    
+    <button class="start">Start</button>
+    <button class="done">Done</button>
+
+    <script src="js/progress.min.js"></script>
+    <script>
+        'use strict';
+
+        const progress = new Progress();
+
+        progress.start();
+
+        window.addEventListener('load', () => {
+            progress.done();
+        });
+
+        document.querySelector('.start').addEventListener('click', () => {
+            progress.start();
+        });
+
+        document.querySelector('.done').addEventListener('click', () => {
+            progress.done();
+        });
+    </script>
+</body>
+</html>
